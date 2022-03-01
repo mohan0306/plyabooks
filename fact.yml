@@ -1,13 +1,16 @@
-- hosts: all
-  become: yes
+---
+- name: Create user and copy passwd file
+  hosts: all
   tasks:
-    - name: Install git
-      yum:
-       name: git
-       state: present
-       update_cache: yes
-    - name: clone remote git repository
-      git:
-        repo: https://github.com/mohan0306/plyabooks.git
-        dest: /var/www/html
+          - name: User creation
+            user:
+             name: kiran
+             password: sunilsunil
+             uid: 6779
+             home: /home/kiran
+          - name: Copy password into users home dir
+            copy:
+             src: /etc/passwd
+             dest: /home/kiran
+...
 
