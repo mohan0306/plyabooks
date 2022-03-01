@@ -1,1 +1,5 @@
-ansible all -i hashmi-inventory -m command -a 'free'
+- hosts: devlinux
+  become: yes
+  tasks:
+    - name: free
+      action: ansible all -i hashmi-inventory -m command -a 'free'
