@@ -1,9 +1,5 @@
 - hosts: all
-  user: ansible
-  become: yes
-  connection: ssh
-  gather_facts: yes
-
+  become: true
   tasks:
     - name: install httpd on servers
       action: yum name=httpd state=present
