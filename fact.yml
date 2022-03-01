@@ -1,5 +1,5 @@
 - hosts: all
- become: yes
+  become: yes
 - name: Install software packages
   tasks:
    - name: Install software
