@@ -1,11 +1,10 @@
-- hosts: all
+- hosts: devlinux
   become: yes
+
   tasks:
-    - name: install apache
-      command: apt-get install apache2 -y
-      when: ansible_os_family=="Debian"
-
-    - name: install apache on RH
-      command: yum install httpd -y
-      when: ansible_os_family=="RedHat"
-
+    - name: print task
+      command: echo "{{item}}"
+      loop:
+        - "one"
+        - "two"
+        - "three"
