@@ -1,16 +1,19 @@
----
-- name: Create user and copy passwd file
+- name: configuring apache2
   hosts: all
   tasks:
-          - name: User creation
-            user:
-             name: kiran
-             password: sunilsunil
-             uid: 6779
-             home: /home/kiran
-          - name: Copy password into users home dir
-            copy:
-             src: /etc/passwd
-             dest: /home/kiran
-...
-
+   - name: Install apache2
+     yum:
+      name: apache2
+      state: present
+   - name: Edit index.html file
+     copy:
+      content: "Welcome to playbooks\n"
+      dest: /var/www/html/index.html
+   - name: Restart apache2
+     service:
+      name: apache2
+      state: restarted
+   - name: check url response of server1
+     uri:
+      url: http://15.207.247.164
+      status: 200
