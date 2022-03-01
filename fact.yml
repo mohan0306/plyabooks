@@ -1,4 +1,4 @@
-- hosts: devlinux
+- hosts: all
   become: yes
 
   tasks:
