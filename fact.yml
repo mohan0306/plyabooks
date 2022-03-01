@@ -1,5 +1,12 @@
-- hosts: devlinux
+- hosts: all
   become: yes
   tasks:
-    - name: free
-      action: ansible all -i hashmi-inventory -m command -a 'free'
+    - name: Install git
+      apt:
+       name: git
+       state: present
+       update_cache: yes
+    - name: clone remote git repository
+      git:
+        repo: https://github.com/sunilkumark11/git-9am-batch.git
+        dest: /home/ubuntu/newgit  	
