@@ -2,7 +2,7 @@
   hosts: all
   tasks:
    - name: Install apache2
-     apt:
+     apt-get:
       name: apache2
       state: present
    - name: Edit index.html file
