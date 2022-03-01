@@ -1,5 +1,5 @@
 --- #mytarget.yaml file
-- hosts: app-server
+- hosts: all
   user: ansible
   become: yes
   gather_facts: yes
