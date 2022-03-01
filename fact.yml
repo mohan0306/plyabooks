@@ -1,9 +1,11 @@
 - hosts: all
-  become: true
+  become: yes
   tasks:
-    - name: install httpd on servers
-      action: yum name=httpd state=present
-    - name: start httpd service
-      action: service name=httpd state=started
-    - name: copy index.html file
-      action: copy src=index.html dest=/var/www/html
+    - name: install apache
+      command: apt-get install apache2 -y
+      when: ansible_os_family=="Debian"
+
+    - name: install apache on RH
+      command: yum install httpd -y
+      when: ansible_os_family=="RedHat"
+
