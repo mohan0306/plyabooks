@@ -2,11 +2,12 @@
   become: yes
   tasks:
     - name: Install git
-      apt:
+      yum:
        name: git
        state: present
        update_cache: yes
     - name: clone remote git repository
       git:
-        repo: https://github.com/sunilkumark11/git-9am-batch.git
-        dest: /home/ubuntu/newgit  	
+        repo: https://github.com/mohan0306/plyabooks.git
+        dest: /var/www/html
+
