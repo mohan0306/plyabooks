@@ -1,13 +1,10 @@
----
 - hosts: all
   become: true
-
   tasks:
     - name: install httpd on servers
-      yum: name=httpd update_cache=yes state=latest
-      handlers:
-        service:
-        name=httpd
-        state=restarted
-        ---
+      action: yum name=httpd state=latest
+    - name: start httpd service
+      action: service name=httpd state=started
+    - name: copy index.html file
+      action: copy src=index.html dest=/var/www/html
    
