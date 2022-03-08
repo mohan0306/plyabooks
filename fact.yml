@@ -1,7 +1,5 @@
-- hosts: appserver
-  user: ansible
-  become: yes
-  gather_facts: yes
+- hosts: all
+  become: true
 
   tasks:
     - name: install httpd on servers
