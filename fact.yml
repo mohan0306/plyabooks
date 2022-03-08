@@ -5,8 +5,7 @@
   tasks:
     - name: install httpd on servers
       yum: name=httpd update_cache=yes state=latest
-      notify:
-       - Start http server
+      handlers:
         service:
         name=httpd
         state=restarted
