@@ -1,4 +1,4 @@
-- hosts: mohan1
+- hosts: all
   vars:
     access: AKIAWPIBJEB5GMAKA5FM
     secret: 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
