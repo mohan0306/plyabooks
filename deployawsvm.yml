@@ -2,7 +2,7 @@
   vars:
     access: AKIAWPIBJEB5GMAKA5FM
     secret: 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
-    region: us-west-1
+    region: ap-south-1
   tasks:
     - ec2_vpc_net:
         name: mohan-vpc
