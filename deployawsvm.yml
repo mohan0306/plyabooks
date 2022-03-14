@@ -68,7 +68,7 @@
         region: "{{ region }}"
         group_id: "{{ security_group.group_id }}"
         vpc_subnet_id: "{{ subnet.subnet.id }}"
-        key_name: new1-s
+        key_name: docker key
         instance_tags:
           Name: mohantestvm
         count_tag:
