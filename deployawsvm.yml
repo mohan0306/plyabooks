@@ -1,8 +1,8 @@
 - hosts: localhost
   vars:
-    access: AKIAWPIBJEB5FGBNNJ4Y
-    secret: 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
-    region: ap-south-1
+    access: AKIA6GLHMYC56IB52XP3
+    secret: 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
+    region: us-west-1
   tasks:
     - ec2_vpc_net:
         name: mohan-vpc
@@ -68,7 +68,7 @@
         region: "{{ region }}"
         group_id: "{{ security_group.group_id }}"
         vpc_subnet_id: "{{ subnet.subnet.id }}"
-        key_name: docker key
+        key_name: tower
         instance_tags:
           Name: mohantestvm
         count_tag:
