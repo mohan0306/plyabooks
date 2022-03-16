@@ -1,7 +1,7 @@
 - hosts: localhost
   vars:
-    access: AKIA6GLHMYC56IB52XP3
-    secret: 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
+    access: 
+    secret:
     region: us-west-1
   tasks:
     - ec2_vpc_net:
