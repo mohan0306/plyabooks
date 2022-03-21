@@ -1,7 +1,7 @@
 - hosts: localhost
   vars:
     access: 
-    secret:
+    secret: 
     region: us-west-1
   tasks:
     - ec2_vpc_net:
