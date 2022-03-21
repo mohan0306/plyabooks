@@ -68,7 +68,7 @@
         region: "{{ region }}"
         group_id: "{{ security_group.group_id }}"
         vpc_subnet_id: "{{ subnet.subnet.id }}"
-        key_name: tower
+        key_name: ansible
         instance_tags:
           Name: mohantestvm
         count_tag:
