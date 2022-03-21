@@ -62,7 +62,7 @@
             cidr_ip: 0.0.0.0/0
       register: security_group
     - ec2:
-        image: ami-0a8a24772b8f01294
+        image:  ami-04893cdb768d0f9ee
         wait: yes
         instance_type: t2.micro
         region: "{{ region }}"
